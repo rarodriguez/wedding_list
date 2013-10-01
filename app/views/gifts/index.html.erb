@@ -1,0 +1,53 @@
+<div class="main">
+	<div class="container_12">
+		<div>
+			Nuestra lista de Bodas:
+			<strong>Por favor leer esta información</strong>: A continuaci&oacute;n se presenta una lista de posibles regalos que nos pueden ser de mucha utilidad en nuestro hogar, de modo que si tienen el gusto de darnos alg&uacute;n presente, nos gustar&iacute;a que lo marquen para Regalar y ahí elija la cantidad que pensaban regalar. Todo esto con el fin de evitar que hayan m&uacute;ltiples personas que den semejantes regalos. 
+		</div>
+		<div class="wrapper">
+			<% @gifts.each_with_index do |gift, i| %>
+			<article class="grid_4 gift_items">
+				<h4><%= gift.name %></h4>
+				<span class="wishlistItemsfirstline"><%= gift.description %></span><br />
+				<span>Cantidad: <%= gift.pending_elements %></span>
+				<% if gift.pending_elements > 0 %>
+				<ul class="gallerylightbox clearfix">
+					<li>
+						<a class="markAsGifted" href="#gift_description_<%=gift.id%>">Marcar para Regalar</a>
+					</li>
+				</ul>
+
+				<div id="gift_description_<%=gift.id%>" style="display:none;" class='gift_popup'>
+					<h3><%= gift.name %></h3>
+					<form action="#" method="post">
+						<input placeholder="Su nombre (opcional):" type="text"><br />
+						<input name="gift_elements" type="number" min="0" max="<%=gift.pending_elements%>" /><br />
+						<input value="Marcar como Regalo" type="submit">
+					</form>
+
+					<center><img class="thankyou-ribbon" src="/assets/gracias.png" alt="" height="168" width="250">
+					</center>
+				</div>
+				<% else %>
+				<ul class="gallerylightbox clearfix">
+					<li>
+						<a class="alreadyGifted" href="#inline_demo" rel="prettyPhoto[inline]">Ya fue regalado</a>
+					</li>
+				</ul>
+				<% end %>
+				<div class="welcomedline"></div>
+			</article>
+			<%end%>
+		</div>
+	</div>
+</div>
+
+<script type='text/javascript'>
+	$(document).ready(function() {
+		$(".markAsGifted").fancybox({
+			prevEffect : 'none',
+			nextEffect : 'none',
+			closeBtn : true,
+		});
+	}); 
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nuestra Boda - Monica y Rodrigo</title>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag    "application", media: "all" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= csrf_meta_tags %> 
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400italic' rel='stylesheet' type='text/css'>  
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:700' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 8]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+        	<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+    </div>
+	<![endif]-->
+    <!--[if lt IE 9]>
+   		<script type="text/javascript" src="js/html5.js"></script>
+	<![endif]-->
+</head>
+<body id="page1">
+	<!--==============================header=================================-->
+    <%= render 'header', :menu_item => @menu_item %>
+    
+	<!--==============================content================================-->
+    <section id="content"><div class="ic"></div>
+        <%= yield %>
+    </section>
+    
+	<!--==============================footer=================================-->
+	<%= render 'footer' %>
+    <script type="text/javascript">
+		$(window).load(function() {
+			$('.slider')._TMS({
+				duration:1000,
+				easing:'easeOutQuint',
+				preset:'slideDown',
+				slideshow:7000,
+				banners:false,
+				pauseOnHover:true,
+				pagination:true,
+				pagNums:false
+			});
+		});
+    </script>
+</body>
+</html>
