@@ -5,6 +5,9 @@ BodaGoguiMonqui::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get 'lista_regalos' => 'gifts#index'
+  post 'regalar/:id' => 'wishes#create', :as=>'gift_a_gift'
+  get 'contacto' => 'home#contact_us', :as=>'contact_us'
+  get 'sus_deseos'=> 'wishes#index', :as=>'wishes'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

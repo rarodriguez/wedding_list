@@ -1,0 +1,11 @@
+$('.thankyou-ribbon').show();
+$('.best_wishes').val('');
+$('#gift_list_elements').html("<%= escape_javascript(render('/gifts/gift_list', :gifts=>@gifts)) %>");
+$(".markAsGifted").fancybox({
+	prevEffect : 'none',
+	nextEffect : 'none',
+	closeBtn : true,
+	beforeShow: function(){
+		$('thankyou-ribbon').hide();
+	}
+}); 

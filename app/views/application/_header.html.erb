@@ -1,7 +1,7 @@
 <%= menu_item = 1 unless defined?(menu_item)%>
 <header>
 	<div class="main">
-		<h1><a href="index.html">Rodrigo y Monica</a><em>Nuestra Boda</em></h1>
+		<h1><a href="/">Rodrigo y Monica</a><em>Nuestra Boda</em></h1>
 	</div>
 	<div class="menu-row">
 		<div class="main">
@@ -11,35 +11,21 @@
 						<nav>
 							<ul class="menu">
 								<li>
-									<a class="<%= 'active' if menu_item == 1 %>" href="/">Principal</a>
+									<a class="<%= 'active' if menu_item == MAIN %>" href="/">Principal</a>
 								</li>
 								<li>
-									<a class="<%= 'active' if menu_item == 2 %>" href="/lista_regalos">Lista de Regalos</a>
+									<a class="<%= 'active' if menu_item == GIFT_LIST %>" href="/lista_regalos">Lista de Regalos</a>
 								</li>
 								<li>
-									<a class="<%= 'active' if menu_item == 3 %>" href="/contactos">Contactos y Confirmaci&oacute;n</a>
+									<a class="<%= 'active' if menu_item == WISHES_LIST %>" href="/sus_deseos">Sus Deseos</a>
+								</li>
+								<li>
+									<a class="<%= 'active' if menu_item == CONTACT %>" href="/contacto">Contacto</a>
 								</li>
 							</ul>
 						</nav>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<div class="main">
-		<div class="slider-wrapper">
-			<div class="slider">
-				<ul class="items">
-					<li>
-						<img src="/assets/slider-img1.jpg" alt="" />
-					</li>
-					<li>
-						<img src="/assets/slider-img2.jpg" alt="" />
-					</li>
-					<li>
-						<img src="/assets/slider-img3.jpg" alt="" />
-					</li>
-				</ul>
 			</div>
 		</div>
 	</div>

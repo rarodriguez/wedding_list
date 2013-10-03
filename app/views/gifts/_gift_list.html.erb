@@ -1,0 +1,40 @@
+<% gifts.each_with_index do |gift, i| %>
+<article class="grid_4 gift_items">
+	<h4><%= gift.name %></h4>
+	<span class="wishlistItemsfirstline"><%= gift.description %></span>
+	<br />
+	<span>Cantidad disponible para regalar: <%= gift.pending_elements %></span>
+	<% unless gift.already_gifted? %>
+	<ul class="gallerylightbox clearfix">
+		<li>
+			<a class="markAsGifted" href="#gift_description_<%= gift.id%>">Marcar para Regalar</a>
+		</li>
+	</ul>
+
+	<div id="gift_description_<%= gift.id%>" style="display:none;" class='gift_popup'>
+		<h4>¿Le gustaría regalar "<%= gift.name %>"?</h4>
+		<br />
+		<p class="gift_description">
+			<%= gift.description %><span class='close_quote'></span>
+		</p>
+		<%= form_tag gift_a_gift_url(gift.id), :remote=>true do%>
+
+		<label for='best_wishes_<%= gift.id%>'>Escriba sus buenos deseos (Opcional):</label>
+		<br />
+		<textarea placeholder="Sus buenos deseos" name="best_wishes" class='best_wishes' rows="7" cols="45" id='best_wishes_<%= gift.id%>'></textarea>
+		<br />
+		<input value="Notificar mi Regalo" type="submit">
+		<%end%>
+		<center><img class="thankyou-ribbon" src="/assets/gracias.png" alt="" height="168" width="250" style='display:none;'>
+		</center>
+	</div>
+	<% else %>
+	<ul class="gallerylightbox clearfix">
+		<li>
+			<span class="alreadyGifted">Ya fue regalado</span>
+		</li>
+	</ul>
+	<% end %>
+	<div class="welcomedline"></div>
+</article>
+<%end%>
