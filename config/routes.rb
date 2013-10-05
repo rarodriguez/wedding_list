@@ -8,6 +8,7 @@ BodaGoguiMonqui::Application.routes.draw do
   post 'regalar/:id' => 'wishes#create', :as=>'gift_a_gift'
   get 'contacto' => 'home#contact_us', :as=>'contact_us'
   get 'sus_deseos'=> 'wishes#index', :as=>'wishes'
+  post 'confirmacion'=> 'confirmations#create', :as=>'confirmations'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

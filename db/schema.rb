@@ -11,14 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131002042041) do
+ActiveRecord::Schema.define(version: 20131004162041) do
+
+  create_table "confirmations", force: true do |t|
+    t.string   "family_name"
+    t.integer  "number_of_guests"
+    t.text     "message"
+    t.string   "user_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "gifts", force: true do |t|
     t.string  "name"
     t.integer "quantity"
     t.string  "description"
-    t.integer "total_gifted"
-    t.boolean "completed"
   end
 
   create_table "wishes", force: true do |t|

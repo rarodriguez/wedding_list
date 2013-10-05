@@ -529,7 +529,7 @@ dl span {float:left; width:98px; font-weight:bold;}
 	}
 	#contact-form input {
 		float:left; 
-		width:490px; 
+		width:400px; 
 		font-size:12px; 
 		line-height:1.25em;
 		color:#000;
@@ -540,12 +540,33 @@ dl span {float:left; width:98px; font-weight:bold;}
 		background:#fff;
 		outline:none;
 	}
+  
+  #contact-form input.link-1 {
+    float:none; 
+    width:115px; 
+    line-height:1em;
+    padding:7px 9px 6px 28px; 
+    margin:0 0 0 15px;
+    font-family:Arial, Helvetica, sans-serif; 
+    border:none; 
+    background:url(/assets/marker-2.gif) 0 0px no-repeat;
+    color: #66B035;
+    text-decoration: underline;
+    font-size:14px;
+    outline: medium none;
+    cursor: pointer;
+  }
+  
+  #contact-form input.link-1:hover {
+    text-decoration: none;
+  }
+  
 	#contact-form textarea {
 		float:left;
 		height:339px; 
-		width:490px;
+		width:400px;
 		max-height:339px; 
-		max-width:490px;
+		max-width:400px;
 		font-size:12px; 
 		line-height:1.25em;
 		color:#000;
@@ -562,7 +583,7 @@ dl span {float:left; width:98px; font-weight:bold;}
 	display:block; 
 	font-size:14px;
 	line-height:30px;
-	width:75px; 
+	width:165px; 
 	color:#000;
 	font-family:Arial, Helvetica, sans-serif;
 }
@@ -760,3 +781,19 @@ article.gift_items{
   -moz-box-shadow: 5px 5px 5px 3px #D4C7B8;
   -webkit-box-shadow: 5px 5px 5px 3px #D4C7B8;
 }
+
+.attendance_confirmed{
+  font-size:15px; 
+  background-color: #88b868; 
+  color: white; 
+  border: 1px solid green; 
+  padding:10px;
+  text-align:center;
+  width:70%;
+  margin: 0 auto 20px;
+  font-family: "PT Sans",sans-serif, Arial, Helvetica;
+  box-shadow: 3px 3px 3px 1px #A6CF8A;
+  -moz-box-shadow: 3px 3px 3px 1px #A6CF8A;
+  -webkit-box-shadow: 3px 3px 3px 1px #A6CF8A;
+}
+
