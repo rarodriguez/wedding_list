@@ -5,5 +5,6 @@ class HomeController < ApplicationController
   
   def contact_us
     @menu_item = CONTACT
+    @confirmation = Confirmation.new
   end
 end

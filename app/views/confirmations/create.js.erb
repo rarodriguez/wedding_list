@@ -1,2 +1,8 @@
+<% if @confirmation.errors.size > 0 %>
+$('.attendance_with_errors').show();
+setInterval(function(){$('.attendance_with_errors').hide();},8000);
+<% else %>
 $('.attendance_confirmed ').show();
 document.getElementById('contact-form').reset();
+setInterval(function(){$('.attendance_with_errors').hide();},5000);
+<% end %>

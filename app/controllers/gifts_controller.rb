@@ -1,6 +1,6 @@
 class GiftsController < ApplicationController
   def index  
-    @gifts = Gift.all
+    @gifts = Gift.order('name').all
     @menu_item = GIFT_LIST
   end
 end

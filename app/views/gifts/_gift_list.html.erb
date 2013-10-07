@@ -1,8 +1,7 @@
 <% gifts.each_with_index do |gift, i| %>
 <article class="grid_4 gift_items">
 	<h4><%= gift.name %></h4>
-	<span class="wishlistItemsfirstline"><%= gift.description %></span>
-	<br />
+	<div class="gift_item_description"><%= gift.description %></div>
 	<span>Cantidad disponible para regalar: <%= gift.pending_elements %></span>
 	<% unless gift.already_gifted? %>
 	<ul class="gallerylightbox clearfix">
