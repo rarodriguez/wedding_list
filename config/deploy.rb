@@ -21,7 +21,7 @@ role :db,  "108.166.77.118", :primary => true # This is where Rails migrations w
 
 # if you want to clean up old releases on each deploy uncomment this:
 after "deploy:restart", "deploy:cleanup"
-after "deploy:update_code", "deploy:symlink"
+after "deploy:update_code", "deploy:create_symlink"
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
@@ -33,7 +33,7 @@ namespace :deploy do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
   desc "Make symlink for database yaml"
-  task :symlink do
+  task :create_symlink do
     run "ln -nfs #{shared_path}/database.yml #{latest_release}/config/database.yml"
   end
 end
