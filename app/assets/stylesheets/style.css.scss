@@ -99,7 +99,7 @@ h1 {
 		width:350px;
 		height:88px;
 		text-indent:-9999em;
-		background:url(/assets/logo.png) 0 0 no-repeat;
+		background:image-url("logo.png") 0 0 no-repeat;
 		float:left;
 		margin-right:18px;
 	}
@@ -119,14 +119,14 @@ h1 {
 .menu-row {
 	width:100%;
 	padding:1px 0 5px;
-	background:url(/assets/menu-row-tail.png) center top repeat-x;
+	background:image-url('menu-row-tail.png') center top repeat-x;
 }
 	#page1 .menu-row {margin-bottom:22px;}
-.menu {width:100%; background:url(/assets/menu-spacer.gif) left top no-repeat; overflow:hidden;}
+.menu {width:100%; background:image-url('menu-spacer.gif') left top no-repeat; overflow:hidden;}
 .menu li {
 	float:left; 
 	position:relative;
-	background:url(/assets/menu-spacer.gif) right top no-repeat;
+	background:image-url('menu-spacer.gif') right top no-repeat;
 }
 .menu li a {
 	display:inline-block; 
@@ -142,14 +142,14 @@ h1 {
 }
 
 .menu li a.active,
-.menu > li > a:hover {background:url(/assets/menu-active-tail.gif) 0 0 repeat-x #66B035;}
+.menu > li > a:hover {background:image-url('menu-active-tail.gif') 0 0 repeat-x #66B035;}
 
 /***** slider *****/
 .slider-wrapper {
 	width:952px;
 	height:516px;
 	padding:54px 0 0 32px;
-	background:url(/assets/slider-bg.png) 0 0 no-repeat;
+	background:image-url('slider-bg.png') 0 0 no-repeat;
 	overflow:hidden;
 }
 .slider {
@@ -172,7 +172,7 @@ h1 {
 		display:block;
 		width:24px;
 		height:24px;
-		background:url(/assets/slider-pagination.png) right top no-repeat;
+		background:image-url('slider-pagination.png') right top no-repeat;
 		cursor:pointer;
 	}
 	.pagination li.current a {cursor:default;}
@@ -218,7 +218,7 @@ h6 {color:#66B035;}
 .border-bot {
 	width:100%; 
 	padding-bottom:20px; 
-	background:url(/assets/pic-4.gif) 0 bottom repeat-x;
+	background:image-url('pic-4.gif') 0 bottom repeat-x;
 }
 
 .q1, .q2, .q3 {
@@ -229,7 +229,7 @@ h6 {color:#66B035;}
 	display:block;
 	width:15px;
 	height:21px;
-	background:url(/assets/pic-1.png) 0 0 no-repeat;
+	background:image-url('pic-1.png') 0 0 no-repeat;
 	position:absolute;
 	top:30px;
 	left:-1px;
@@ -239,7 +239,7 @@ h6 {color:#66B035;}
 	display:block;
 	width:15px;
 	height:21px;
-	background:url(/assets/pic-2.png) 0 0 no-repeat;
+	background:image-url('pic-2.png') 0 0 no-repeat;
 	position:absolute;
 	top:30px;
 	right:0;
@@ -248,32 +248,32 @@ h6 {color:#66B035;}
 .q1 .quote-bot {
 	padding-bottom:5px;
 	padding-left:10px;
-	background:url(/assets/quote-bot.jpg) right bottom no-repeat;
+	background:image-url('quote-bot.jpg') right bottom no-repeat;
 	position:relative;
 	z-index:1;
 }
 .q2 .quote-bot {
 	padding-bottom:5px;
 	padding-right:10px;
-	background:url(/assets/quote-bot.jpg) left bottom no-repeat;
+	background:image-url('quote-bot.jpg') left bottom no-repeat;
 	position:relative;
 	z-index:1;
 }
 .quote-top {
 	width:100%;
 	padding-top:5px;
-	background:url(/assets/quote-top.jpg) right top no-repeat;
+	background:image-url('quote-top.jpg') right top no-repeat;
 }
 .quote {
 	width:100%;
 	overflow:hidden;
 	color:#7c7c7c;
-	background:url(/assets/quote-tail.jpg) right top repeat-y;
+	background:image-url('quote-tail.jpg') right top repeat-y;
 }
 	.quote .padding {padding:18px 25px 19px 30px;}
 
 .q3 {
-	background:url(/assets/pic-3.png) 0 3px no-repeat;
+	background:image-url('pic-3.png') 0 3px no-repeat;
 	color:#7c7c7c;
 	font-style:italic;
 	margin-bottom:17px;
@@ -333,7 +333,7 @@ div.nav-controls a.prev {
 	display:block;
 	width:27px;
 	height:27px;
-	background:url(/assets/gallery-prev.jpg) 0 0 no-repeat;
+	background:image-url('gallery-prev.jpg') 0 0 no-repeat;
 	text-indent:-9999em;
 	position:absolute;
 	top:0;
@@ -344,7 +344,7 @@ div.nav-controls a.next {
 	display:block;
 	width:27px;
 	height:27px;
-	background:url(/assets/gallery-next.jpg) 0 0 no-repeat;
+	background:image-url('gallery-next.jpg') 0 0 no-repeat;
 	text-indent:-9999em;
 	position:absolute;
 	top:0;
@@ -494,7 +494,7 @@ ul.thumbs li.last {margin:0;}
 .list-1 li {
 	line-height:20px; 
 	padding:5px 0 5px 15px; 
-	background:url(/assets/marker-1.gif) 0 12px no-repeat;
+	background:image-url('marker-1.gif') 0 12px no-repeat;
 }
 	.list-1 li a {
 		display:inline-block;
@@ -508,7 +508,7 @@ ul.thumbs li.last {margin:0;}
 	display:inline-block; 
 	line-height:27px; 
 	padding-left:39px; 
-	background:url(/assets/marker-2.gif) 0 0px no-repeat;
+	background:image-url('marker-2.gif') 0 0px no-repeat;
 }
 .link-1:hover {text-decoration:none;} 
 
@@ -549,7 +549,7 @@ dl span {float:left; width:98px; font-weight:bold;}
     margin:0 0 0 15px;
     font-family:Arial, Helvetica, sans-serif; 
     border:none; 
-    background:url(/assets/marker-2.gif) 0 0px no-repeat;
+    background:image-url('marker-2.gif') 0 0px no-repeat;
     color: #66B035;
     text-decoration: underline;
     font-size:14px;
@@ -595,7 +595,7 @@ dl span {float:left; width:98px; font-weight:bold;}
 footer {
 	width:100%; 
 	padding:38px 0 50px;
-	background:url(/assets/footer-tail.gif) center top repeat-x;
+	background:image-url('footer-tail.gif') center top repeat-x;
 }
 
 footer cite {
@@ -615,7 +615,7 @@ footer cite {
 		width:41px;
 		height:46px;
 		text-indent:-9999em;
-		background:url(/assets/social-icons.png) 0 0 no-repeat;
+		background:image-url('social-icons.png') 0 0 no-repeat;
 	}
 	.list-services .item-2 {background-position:-50px 0;}
 	.list-services .item-3 {background-position:-100px 0;}
