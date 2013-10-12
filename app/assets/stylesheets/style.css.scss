@@ -269,6 +269,10 @@ h6 {color:#66B035;}
 	overflow:hidden;
 	color:#7c7c7c;
 	background:image-url('quote-tail.jpg') right top repeat-y;
+	p {
+	  font-size: 13px;
+	  text-align: justify;
+	}
 }
 	.quote .padding {padding:18px 25px 19px 30px;}
 
@@ -822,4 +826,11 @@ article.gift_items{
 .gift_item_description{
   height: 90px;
   padding-left: 15px
+}
+
+.our_history {
+  p {
+    font-size: 13px;
+    text-align: justify;
+  }
 }
