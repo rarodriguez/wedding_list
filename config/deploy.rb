@@ -11,7 +11,7 @@ set :scm, :git # You can set :scm explicitly or Capistrano will make an intellig
 default_run_options[:pty] = true
 set :keep_releases, 5
 set :rails_env, "production"
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 set :use_sudo, false
 set :user, "root"
 
