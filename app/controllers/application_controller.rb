@@ -18,15 +18,21 @@ class ApplicationController < ActionController::Base
   
   def store_user_info
     if session[:user_information]
-      visitor = AppVisitor.find(session[:user_information])
+      visitor = AppVisitor.find_by_id(session[:user_information])
+      unless visitor
+        agent = AgentOrange::UserAgent.new(request.env['HTTP_USER_AGENT'] || '')
+        visitor = AppVisitor.create(user_ip: request.remote_ip, visit_date: Time.now, first_request: Time.now,
+                        last_request: Time.now, browser: agent.device.engine.browser.to_s, platform: agent.device.platform.to_s,
+                        os: agent.device.operating_system.to_s)
+      end
       visitor.update_attribute(:last_request, Time.now)
     else
       agent = AgentOrange::UserAgent.new(request.env['HTTP_USER_AGENT'] || '')
-      visitor = AppVisitor.create(user_ip: request.remote_ip, visit_date: Time.now, first_request: Time.now, 
-                        last_request: Time.now, browser: agent.device.engine.browser, platform: agent.device.platform,
-                        os: agent.device.operating_system)
-      session[:user_information] = visitor.id 
-    end 
+      visitor = AppVisitor.create(user_ip: request.remote_ip, visit_date: Time.now, first_request: Time.now,
+                        last_request: Time.now, browser: agent.device.engine.browser.to_s, platform: agent.device.platform.to_s,
+                        os: agent.device.operating_system.to_s)
+      session[:user_information] = visitor.id
+    end
   end
   
 end
