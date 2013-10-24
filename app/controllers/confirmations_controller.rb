@@ -1,6 +1,7 @@
 class ConfirmationsController < ApplicationController
   def create
     @confirmation = Confirmation.new(confirmation_params)
+    @confirmation.message = @confirmation.message.strip
     @confirmation.user_ip = request.remote_ip
     @confirmation.save
   end

@@ -9,7 +9,8 @@ class WishesController < ApplicationController
   end
   
   def index
-    @wishes = Wish.where("wishes != ''")
+    @wishes = Wish.where("wishes != ''").all
+    @wishes += Confirmation.where("message != ''").all
     @menu_item = WISHES_LIST
   end
 end

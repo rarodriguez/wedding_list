@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131004162041) do
+ActiveRecord::Schema.define(version: 20131024040333) do
+
+  create_table "app_visitors", force: true do |t|
+    t.string   "user_ip"
+    t.datetime "visit_date"
+    t.string   "browser"
+    t.string   "platform"
+    t.string   "os"
+    t.datetime "first_request"
+    t.datetime "last_request"
+  end
 
   create_table "confirmations", force: true do |t|
     t.string   "family_name"
